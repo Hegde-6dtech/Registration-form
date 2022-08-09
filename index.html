@@ -99,17 +99,31 @@
             var mobile = document.forms["myform"]["mobile"].value;
             var age = document.forms["myform"]["age"].value;
             var num = document.forms["myform"]["mobile"].value;
+            var letter = /^[a-zA-Z]*$/;
             // validation for first name
             if(!isNaN(first_name))
             {
                 alert("first name should be only alphabets");
                 return false;
             }
+           if(!first_name.match(letter))
+            {
+                alert("First name must contain only letters");
+                return false;
+
+            }
             //vlidation for last name
             if(!isNaN(last_name))
             {
                 alert("last name should be only alphabets");
                 return false;
+            }
+
+            if(!last_name.match(letter))
+            {
+                alert("Last name must contain only letters");
+                return false;
+                
             }
             if(isNaN(mobile))
             {
